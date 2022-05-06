@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "956450798060",
+    "project_id": "mobilishop-f2a89",
+    "storage_bucket": "mobilishop-f2a89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956450798060:android:182a0e25604d3c268ea8c9",
+        "android_client_info": {
+          "package_name": "com.example.mobilishop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956450798060-nt9fem3r3qojc0bqqivs713ap2cf9jla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV15I63E6Vx90Sq1TWgVBSj9uckwVqq7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956450798060-nt9fem3r3qojc0bqqivs713ap2cf9jla.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
