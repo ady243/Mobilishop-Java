@@ -7,31 +7,31 @@
         <item
             android:id="@+id/nav_my_shop"
             android:icon="@drawable/ic_baseline_store_24"
-            android:title="My Shop" />
+            android:title="Mon Boutique" />
 
         <item
             android:id="@+id/nav_my_order"
             android:icon="@drawable/ic_baseline_shopping_bag_24"
-            android:title="My Orders" />
+            android:title="Mes Commandes" />
         <item
             android:id="@+id/nav_my_reward"
             android:icon="@drawable/ic_baseline_sticky_note_2_24"
-            android:title="My Rewards" />
+            android:title="Mes Récompenses" />
         <item
             android:id="@+id/nav_my_cart"
             android:icon="@drawable/ic_baseline_shopping_cart_24"
-            android:title="My Cart" />
+            android:title="Mon Panier" />
         <item
             android:id="@+id/nav_my_wishlist"
             android:icon="@drawable/ic_baseline_favorite_24"
-            android:title="My Whishlist" />
+            android:title="Ma Liste de souhaits" />
         <item
             android:id="@+id/nav_my_account"
             android:icon="@drawable/ic_baseline_account_circle_24"
-            android:title="My Account" />
+            android:title="Mon Compte" />
     </group>
     <item
         android:id="@+id/nav_sign_out"
         android:icon="@drawable/ic_baseline_exit_to_app_24"
-        android:title="Sign Out" />
+        android:title="Deconnexion" />
 </menu>

@@ -16,7 +16,7 @@ public class CartItemModel {
 
     private int productImage;
     private String productTitle;
-    private int couponsGratuit;
+    private int freeCoupens;
     private String productPrice;
     private String cuttedPrice;
     private int productQuantity;
@@ -24,11 +24,11 @@ public class CartItemModel {
     private int couponsApplique;
 
 
-    public CartItemModel(int type, int productImage, String productTitle, int couponsGratuit, String productPrice, String cuttedPrice, int productQuantity, int offersApplied, int couponsApplique) {
+    public CartItemModel(int type, int productImage, String productTitle, int freeCoupens, String productPrice, String cuttedPrice, int productQuantity, int offersApplied, int couponsApplique) {
         this.type = type;
         this.productImage = productImage;
         this.productTitle = productTitle;
-        this.couponsGratuit = couponsGratuit;
+        this.freeCoupens = freeCoupens;
         this.productPrice = productPrice;
         this.cuttedPrice = cuttedPrice;
         this.productQuantity = productQuantity;
@@ -56,12 +56,12 @@ public class CartItemModel {
         this.productTitle = productTitle;
     }
 
-    public int getCouponsGratuit() {
-        return couponsGratuit;
+    public int getFreeCoupens() {
+        return freeCoupens;
     }
 
-    public void setCouponsGratuit(int couponsGratuit) {
-        this.couponsGratuit = couponsGratuit;
+    public void setFreeCoupens(int freeCoupens) {
+        this.freeCoupens = freeCoupens;
     }
 
     public String getProductPrice() {
@@ -96,11 +96,11 @@ public class CartItemModel {
         this.offersApplied = offersApplied;
     }
 
-    public int getCouponsApplique() {
+    public int getCoupensApplied() {
         return couponsApplique;
     }
 
-    public void setCouponsApplique(int couponsApplique) {
+    public void setCoupensApplied(int couponsApplique) {
         this.couponsApplique = couponsApplique;
     }
 /////// cart item
@@ -111,16 +111,16 @@ public class CartItemModel {
     private String totalItems;
     private String totalItemPrice;
     private String deliveryPrice;
-    private String saveAmount;
+    private String savedAmount;
     private String totalAmount;
 
-    public CartItemModel(int type, String totalItems, String totalItemPrice, String deliveryPrice,String totalAmount, String saveAmount) {
+    public CartItemModel(int type, String totalItems, String totalItemPrice, String deliveryPrice,String totalAmount, String savedAmount) {
       this.totalAmount = totalAmount;
         this.type = type;
         this.totalItems = totalItems;
         this.totalItemPrice = totalItemPrice;
         this.deliveryPrice = deliveryPrice;
-        this.saveAmount = saveAmount;
+        this.savedAmount= savedAmount;
     }
 
     public String getTotalAmount() {
@@ -155,12 +155,12 @@ public class CartItemModel {
         this.deliveryPrice = deliveryPrice;
     }
 
-    public String getSaveAmount() {
-        return saveAmount;
+    public String getSavedAmount() {
+        return savedAmount;
     }
 
     public void setSaveAmount(String saveAmount) {
-        this.saveAmount = saveAmount;
+        this.savedAmount= saveAmount;
     }
 
     /////cart total

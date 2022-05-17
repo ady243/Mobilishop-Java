@@ -53,12 +53,13 @@ private List<CartItemModel>cartItemModelList;
       case CartItemModel.CART_ITEM:
           int resource = cartItemModelList.get(position).getProductImage();
           String title = cartItemModelList.get(position).getProductTitle();
-          int couponsGratuit = cartItemModelList.get(position).getCouponsGratuit();
+          int freeCoupens = cartItemModelList.get(position).getFreeCoupens();
           String productPrice = cartItemModelList.get(position).getProductPrice();
           String cuttedPrice = cartItemModelList.get(position).getCuttedPrice();
           int offersApplied = cartItemModelList.get(position).getOffersApplied();
 
-          ((CartItemViewholder)viewHolder).setItemDetails(resource,title,couponsGratuit,productPrice,cuttedPrice,offersApplied);
+          //problem cible
+          ((CartItemViewholder)viewHolder).setItemDetails(resource,title,freeCoupens,productPrice,cuttedPrice,offersApplied);
           break;
           case CartItemModel.TOTAL_AMOUNT:
 
@@ -66,7 +67,7 @@ private List<CartItemModel>cartItemModelList;
               String totalItemPrice = cartItemModelList.get(position).getTotalItemPrice();
               String deliveryPrice = cartItemModelList.get(position).getDeliveryPrice();
               String totalAmount = cartItemModelList.get(position).getTotalAmount();
-              String savedAmount = cartItemModelList.get(position).getSaveAmount();
+              String savedAmount = cartItemModelList.get(position).getSavedAmount();
 
               ((CartTotalAmountViewholder)viewHolder).setTotalAmount(totalItems,totalItemPrice,deliveryPrice,totalAmount,savedAmount);
 
@@ -81,16 +82,17 @@ private List<CartItemModel>cartItemModelList;
     public int getItemCount() {
         return cartItemModelList.size();
     }
+    //problem cible
     class CartItemViewholder extends RecyclerView.ViewHolder{
 
         private ImageView productImage;
-        private ImageView freeCouponsIcon;
-        private TextView productTitle;
-        private TextView couponsGratuit;
+        private ImageView freeCoupenIcon;
+        private TextView  productTitle;
+        private TextView freeCoupens;
         private TextView productPrice;
         private TextView cuttedPrice;
         private TextView offersApplied;
-        private TextView couponsApplique;
+        private TextView coupensApplied;
         private TextView productQuantity;
 
 
@@ -99,43 +101,45 @@ private List<CartItemModel>cartItemModelList;
             super(itemView);
             productImage = itemView.findViewById(R.id.product_image);
             productTitle = itemView.findViewById(R.id.product_title);
-            couponsGratuit = itemView.findViewById(R.id.tv_free_coupon);
-            freeCouponsIcon = itemView.findViewById(R.id.free_coupon_icon);
+            freeCoupens = itemView.findViewById(R.id.tv_free_coupen);
+            freeCoupenIcon = itemView.findViewById(R.id.free_coupen_icon);
             productPrice = itemView.findViewById(R.id.product_price);
             cuttedPrice = itemView.findViewById(R.id.cutted_price);
             offersApplied = itemView.findViewById(R.id.offers_applied);
-            couponsApplique = itemView.findViewById(R.id.coupons_applied);
+            coupensApplied = itemView.findViewById(R.id.coupens_applied);
             productQuantity = itemView.findViewById(R.id.product_quentity);
         }
-        private void setItemDetails(int resource, String tile,int  couponsGratuitNo,String productPriceText,String cuttedPriceText,int offreAppliedNo){
+        private void setItemDetails(int resource, String title, int freeCoupensNo,String productPriceText,String cuttedPriceText,int offersAppliedNo){
+            //problem cible
             productImage.setImageResource(resource);
-            productTitle.setText(tile);
-            if (  couponsGratuitNo > 0) {
-                freeCouponsIcon.setVisibility(View.VISIBLE);
-                couponsGratuit.setVisibility(View.VISIBLE);
-                if(couponsGratuitNo == 1) {
-                    couponsGratuit.setText("Gratuit" + couponsGratuitNo + "Coupon");
+            productTitle.setText(title);
+            if (  freeCoupensNo > 0) {
+                freeCoupenIcon.setVisibility(View.VISIBLE);
+                freeCoupens.setVisibility(View.VISIBLE);
+                if(freeCoupensNo == 1) {
+                    freeCoupens.setText("Gratuit" + freeCoupensNo + "Coupon");
                 }else{
-                    couponsGratuit.setText("Gratuit" + couponsGratuitNo + "Coupons");
+                    freeCoupens.setText("Gratuit" + freeCoupensNo + "Coupons");
                 }
             }else{
-                freeCouponsIcon.setVisibility(View.INVISIBLE);
-                couponsGratuit.setVisibility(View.INVISIBLE);
+                freeCoupenIcon.setVisibility(View.INVISIBLE);
+                freeCoupens.setVisibility(View.INVISIBLE);
             }
             productPrice.setText(productPriceText);
             cuttedPrice.setText(cuttedPriceText);
-            if(offreAppliedNo > 0){
+            if(offersAppliedNo > 0){
                 offersApplied.setVisibility(View.VISIBLE);
                 offersApplied.setText(offersApplied + "Offre appliqué");
             }else{
                 offersApplied.setVisibility(View.INVISIBLE);
             }
-            if(offreAppliedNo > 0){
+            if(offersAppliedNo > 0){
                 offersApplied.setVisibility(View.VISIBLE);
                 offersApplied.setText(offersApplied + "Offre appliqué");
             }else{
                 offersApplied.setVisibility(View.INVISIBLE);
             }
+
 
         }
     }
@@ -145,7 +149,7 @@ private List<CartItemModel>cartItemModelList;
         private TextView totalItemsPrice;
         private TextView deliveryPrice;
         private TextView totalAmount;
-        private TextView saveAmount;
+        private TextView savedAmount;
 
 
         public CartTotalAmountViewholder(@NonNull View itemView) {
@@ -154,16 +158,15 @@ private List<CartItemModel>cartItemModelList;
             totalItemsPrice = itemView.findViewById(R.id.total_items_price);
             deliveryPrice = itemView.findViewById(R.id.delivery_price);
             totalAmount = itemView.findViewById(R.id.total_price);
-            saveAmount = itemView.findViewById(R.id.total_price);
-            saveAmount = itemView.findViewById(R.id.saved_amount);
+            savedAmount= itemView.findViewById(R.id.saved_amount);
         }
 
-        private void setTotalAmount(String totalItemText,String totalItemPriceText,String deliveryPriceText,String totalAmountText,String saveAmountText){
+        private void setTotalAmount(String totalItemText,String totalItemPriceText,String deliveryPriceText,String totalAmountText,String savedAmountText){
             totalItems.setText(totalItemText);
             totalItemsPrice.setText(totalItemPriceText);
             deliveryPrice.setText(deliveryPriceText);
             totalAmount.setText(totalAmountText);
-            saveAmount.setText(saveAmountText);
+            savedAmount.setText(savedAmountText);
         }
     }
 }

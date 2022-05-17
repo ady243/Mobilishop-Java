@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-       //fab.setOnClickListener(view -> Snackbar.make(view,"Replace with your own action",Snackbar.LENGTH_LONG).setAction("Action",null).show());
+     //  fab.setOnClickListener(view -> Snackbar.make(view,"Replace with your own action",Snackbar.LENGTH_LONG).setAction("Action",null).show());
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity
 
          navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.getMenu().getItem(0).setChecked(true);
+        frameLayout = findViewById(R.id.main_framelayout);
     }
 
 
@@ -107,7 +109,7 @@ public class MainActivity extends AppCompatActivity
         }else if(id == R.id.nav_my_wishlist){
             //tpo do my wishlist
         }else if(id == R.id.nav_my_account){
-            //to do accountc
+            //to do account
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

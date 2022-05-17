@@ -14,7 +14,7 @@
         android:title="notification"
         app:showAsAction="always" />
     <item
-        android:id="@+id/main_cart_icon"
+        android:id="@+id/main_card_icon"
         android:orderInCategory="100"
         android:icon="@drawable/ic_baseline_shopping_cart_24"
         android:title="cart"

@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/free_coupon_icon"
+        android:id="@+id/free_coupen_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/products_title"
@@ -39,13 +39,13 @@
         app:tint="#8000ff" />
 
     <TextView
-        android:id="@+id/tv_free_coupon"
+        android:id="@+id/tv_free_coupen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2 coupons gratuit"
         android:textColor="#8000ff"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/free_coupon_icon"
+        app:layout_constraintStart_toEndOf="@+id/free_coupen_icon"
         app:layout_constraintTop_toBottomOf="@+id/products_title" />
 
     <TextView
@@ -59,7 +59,7 @@
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_free_coupon" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_free_coupen" />
 
     <TextView
         android:id="@+id/textView21"
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/product_price" />
 
     <TextView
-        android:id="@+id/coupons_applied"
+        android:id="@+id/coupens_applied"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -114,10 +114,10 @@
         android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
         android:drawablePadding="8dp"
 
-        app:layout_constraintBottom_toBottomOf="@+id/coupons_applied"
+        app:layout_constraintBottom_toBottomOf="@+id/coupens_applied"
         app:layout_constraintEnd_toStartOf="@+id/textView21"
         app:layout_constraintStart_toEndOf="@+id/product_image"
-        app:layout_constraintTop_toBottomOf="@+id/tv_free_coupon" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_free_coupen" />
 
     <LinearLayout
         android:id="@+id/coupon_redemption_layout"
@@ -129,7 +129,7 @@
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coupons_applied">
+        app:layout_constraintTop_toBottomOf="@+id/coupens_applied">
 
         <TextView
             android:id="@+id/tv_coupon_redemption"
@@ -145,7 +145,7 @@
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:background="@drawable/border_background"
-            android:text="voir"
+            android:text="Echanger"
             android:textColor="@color/black"
             android:textSize="12sp" />
     </LinearLayout>
