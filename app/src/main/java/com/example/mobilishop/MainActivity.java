@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
         frameLayout = findViewById(R.id.main_framelayout);
+        setFragment(new HomeFragment(),Home_FRAGMENT);
     }
 
 
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity
             //to do my reward
         }else if(id == R.id.nav_my_cart){
             myCart();
-            //to do my cart
+
         }else if(id == R.id.nav_my_wishlist){
             //tpo do my wishlist
         }else if(id == R.id.nav_my_account){
