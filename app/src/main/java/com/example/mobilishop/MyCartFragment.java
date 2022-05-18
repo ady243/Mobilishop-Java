@@ -13,6 +13,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+*A simple {@link Fragment} subclass.
+ */
 
 public class MyCartFragment extends Fragment {
 

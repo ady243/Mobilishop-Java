@@ -58,8 +58,8 @@ public class CartAdapter extends RecyclerView.Adapter {
               String title = cartItemModelList.get(position).getProductTitle();
                 int freeCoupens = cartItemModelList.get(position).getFreeCoupens();
                 String productPrice = cartItemModelList.get(position).getProductPrice();
-                String cuttedPrice = cartItemModelList.get(position).getCuttedPrice();
                 int offersApplied = cartItemModelList.get(position).getOffersApplied();
+                String cuttedPrice = cartItemModelList.get(position).getCuttedPrice();
 
 
                 ((CartItemViewholder)viewHolder).setItemDetails(resource,title,freeCoupens,productPrice,cuttedPrice,offersApplied);
