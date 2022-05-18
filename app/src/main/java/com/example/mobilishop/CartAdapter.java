@@ -37,8 +37,8 @@ public class CartAdapter extends RecyclerView.Adapter {
 
             case CartItemModel.CART_ITEM:
 
-                View CartItemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cart_item_layout,viewGroup,false);
-                return  new CartItemViewholder(CartItemView);
+                View cartItemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cart_item_layout,viewGroup,false);
+                return  new CartItemViewholder(cartItemView);
 
             case CartItemModel.TOTAL_AMOUNT:
                 View cartTotalView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cart_total_amount_layout,viewGroup,false);
@@ -54,19 +54,20 @@ public class CartAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
         switch (cartItemModelList.get(position).getType()){
             case CartItemModel.CART_ITEM:
-                int resource = cartItemModelList.get(position).getProductImage();
-                String title = cartItemModelList.get(position).getProductTitle();
+              int resource = cartItemModelList.get(position).getProductImage();
+              String title = cartItemModelList.get(position).getProductTitle();
                 int freeCoupens = cartItemModelList.get(position).getFreeCoupens();
                 String productPrice = cartItemModelList.get(position).getProductPrice();
                 String cuttedPrice = cartItemModelList.get(position).getCuttedPrice();
                 int offersApplied = cartItemModelList.get(position).getOffersApplied();
 
-                ((CartItemViewholder)viewHolder).setItemDetails(resource,title,freeCoupens,productPrice,cuttedPrice,offersApplied);
+
+                ((CartItemViewholder)viewHolder).setItemDetails(resource,title,freeCoupens,productPrice,offersApplied,cuttedPrice);
                 break;
 
             case CartItemModel.TOTAL_AMOUNT:
 
-                String totalItems = cartItemModelList.get(position).getTotalItems();
+               String totalItems = cartItemModelList.get(position).getTotalItems();
                 String totalItemPrice = cartItemModelList.get(position).getTotalItemPrice();
                 String deliveryPrice = cartItemModelList.get(position).getDeliveryPrice();
                 String totalAmount = cartItemModelList.get(position).getTotalAmount();
@@ -165,7 +166,7 @@ public class CartAdapter extends RecyclerView.Adapter {
             savedAmount = itemView.findViewById(R.id.saved_amount);
         }
 
-        private  void setTotalAmount(String totalItemText,String totalItemPriceText,String deliveryPriceText,String totalAmountText, String savedAmountPriceText){
+        private  void setTotalAmount(String totalItemText, String totalItemPriceText, String deliveryPriceText, String totalAmountText, String savedAmountPriceText){
             totalItems.setText(totalItemText);
             totalItemPrice.setText(totalItemPriceText);
             deliveryPrice.setText(deliveryPriceText);
