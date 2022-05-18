@@ -62,7 +62,7 @@ public class CartAdapter extends RecyclerView.Adapter {
                 int offersApplied = cartItemModelList.get(position).getOffersApplied();
 
 
-                ((CartItemViewholder)viewHolder).setItemDetails(resource,title,freeCoupens,productPrice,offersApplied,cuttedPrice);
+                ((CartItemViewholder)viewHolder).setItemDetails(resource,title,freeCoupens,productPrice,cuttedPrice,offersApplied);
                 break;
 
             case CartItemModel.TOTAL_AMOUNT:
