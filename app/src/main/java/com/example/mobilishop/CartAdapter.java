@@ -13,7 +13,7 @@ import java.util.List;
 
 
 public class CartAdapter extends RecyclerView.Adapter {
-    private List<CardtItemModel>cartItemModelList;
+    private List<CartItemModel> cartItemModelList;
 
     public CartAdapter(List<CartItemModel>cartItemModelList){
         this.cartItemModelList = cartItemModelList;
