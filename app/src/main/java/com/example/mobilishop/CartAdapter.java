@@ -38,7 +38,7 @@ public class CartAdapter extends RecyclerView.Adapter {
             case CartItemModel.CART_ITEM:
 
                 View cartItemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cart_item_layout,viewGroup,false);
-                return  new CartItemViewholder(cartItemView);
+                return new CartItemViewholder(cartItemView);
 
             case CartItemModel.TOTAL_AMOUNT:
                 View cartTotalView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cart_total_amount_layout,viewGroup,false);
@@ -117,7 +117,7 @@ public class CartAdapter extends RecyclerView.Adapter {
         }
         private void setItemDetails(int resource, String title,int freeCoupensNo,String productPriceText,String cuttedPriceText, int offersAppliedNo){
             productImage.setImageResource(resource);
-            productTitle.setText(title);
+         //   productTitle.setText(title);
             if(freeCoupensNo>0){
                 freeCoupenIcon.setVisibility(View.VISIBLE);
                 freeCoupens.setVisibility(View.VISIBLE);
@@ -131,7 +131,7 @@ public class CartAdapter extends RecyclerView.Adapter {
                 freeCoupens.setVisibility(View.INVISIBLE);
             }
             productPrice.setText(productPriceText);
-            cuttedPrice.setText(cuttedPriceText);
+        //    cuttedPrice.setText(cuttedPriceText);
             if(offersAppliedNo > 0){
                 offersApplied.setVisibility(View.VISIBLE);
                 offersApplied.setText(offersAppliedNo + "offers applied");
