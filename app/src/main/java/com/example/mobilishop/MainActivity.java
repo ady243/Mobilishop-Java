@@ -5,6 +5,7 @@ import android.view.MenuItem;
 import android.view.Menu;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity
     private static  final int CART_FRAGMENT =1;
 
     private FrameLayout frameLayout;
+    private ImageView actionBarLogo;
       private static int currentFragment;
       private NavigationView navigationView;
 
@@ -32,8 +34,9 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar) ;
+       actionBarLogo = findViewById(R.id.actionbar_logo);
        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
      //  fab.setOnClickListener(view -> Snackbar.make(view,"Replace with your own action",Snackbar.LENGTH_LONG).setAction("Action",null).show());
@@ -90,6 +93,9 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
     private void myCart(){
+        actionBarLogo.setVisibility(View.GONE);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setTitle("Mon Panier");
         invalidateOptionsMenu();
         setFragment(new MyCartFragment(),CART_FRAGMENT);
         navigationView.getMenu().getItem(3).setChecked(true);
@@ -99,8 +105,14 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item){
         int id = item.getItemId();
-        if( id == R.id.nav_my_order){
+        if(id == R.id.nav_my_shop){
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+            actionBarLogo.setVisibility(View.VISIBLE);
+            invalidateOptionsMenu();
             setFragment(new HomeFragment(),Home_FRAGMENT);
+        }
+       else if( id == R.id.nav_my_order){
+
             //to do my order
         }else if (id == R.id.nav_my_reward){
             //to do my reward
@@ -118,10 +130,13 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void  setFragment(Fragment fragment,int fragmentNo){
-        currentFragment = fragmentNo;
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(frameLayout.getId(),fragment);
-        fragmentTransaction.commit();
+        if(fragmentNo != currentFragment) {
+            currentFragment = fragmentNo;
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
+            fragmentTransaction.replace(frameLayout.getId(), fragment);
+            fragmentTransaction.commit();
+        }
     }
 
 

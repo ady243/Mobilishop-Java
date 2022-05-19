@@ -122,9 +122,9 @@ public class CartAdapter extends RecyclerView.Adapter {
                 freeCoupenIcon.setVisibility(View.VISIBLE);
                 freeCoupens.setVisibility(View.VISIBLE);
                 if(freeCoupensNo == 1) {
-                    freeCoupens.setText("Coupons" + freeCoupensNo + "Gratuit");
+                    freeCoupens.setText("Coupons " + freeCoupensNo + " Gratuit");
                 }else{
-                    freeCoupens.setText("Coupons" + freeCoupensNo + "Gratuit");
+                    freeCoupens.setText("Coupons " + freeCoupensNo + " Gratuit");
                 }
             }else{
                 freeCoupenIcon.setVisibility(View.INVISIBLE);

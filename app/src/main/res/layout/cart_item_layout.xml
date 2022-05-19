@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
     android:elevation="3dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -33,6 +35,7 @@
         android:id="@+id/free_coupen_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_free_coupen"
         app:layout_constraintStart_toStartOf="@+id/products_title"
         app:layout_constraintTop_toBottomOf="@+id/products_title"
         app:srcCompat="@drawable/ic_baseline_discount_24"
@@ -66,6 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:textSize="12sp"
         android:text="€ 590"
         app:layout_constraintBottom_toBottomOf="@+id/product_price"
         app:layout_constraintEnd_toStartOf="@+id/product_price" />
@@ -147,7 +151,7 @@
             android:background="@drawable/border_background"
             android:text="Echanger"
             android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:textSize="7dp" />
     </LinearLayout>
 
     <LinearLayout
