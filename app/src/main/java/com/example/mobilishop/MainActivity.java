@@ -23,10 +23,11 @@ public class MainActivity extends AppCompatActivity
 
     private static final int Home_FRAGMENT = 0;
     private static  final int CART_FRAGMENT =1;
+    private static final int ORDERS_FRAGMENT = 2;
 
     private FrameLayout frameLayout;
     private ImageView actionBarLogo;
-      private static int currentFragment;
+      private static int currentFragment = -1;
       private NavigationView navigationView;
 
     @Override
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         //// Inflate the menu; this adds items to the action bar if it is present.
         if(currentFragment == Home_FRAGMENT){
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
             getMenuInflater().inflate(R.menu.main, menu);
         }
 
@@ -87,37 +89,38 @@ public class MainActivity extends AppCompatActivity
             //to do notification
             return true;
         }else if(id == R.id.main_cart_icon){
-           myCart();
+           gotoFragment("Mon Panier",new MyCartFragment(),CART_FRAGMENT);
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
-    private void myCart(){
+    private void gotoFragment(String title, Fragment fragment,int fragmentNo){
         actionBarLogo.setVisibility(View.GONE);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setTitle("Mon Panier");
+        getSupportActionBar().setTitle(title);
         invalidateOptionsMenu();
-        setFragment(new MyCartFragment(),CART_FRAGMENT);
-        navigationView.getMenu().getItem(3).setChecked(true);
-
+        setFragment(fragment,fragmentNo);
+        if(fragmentNo == CART_FRAGMENT) {
+            navigationView.getMenu().getItem(3).setChecked(true);
+        }
     }
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item){
         int id = item.getItemId();
         if(id == R.id.nav_my_shop){
-            getSupportActionBar().setDisplayShowTitleEnabled(false);
+
             actionBarLogo.setVisibility(View.VISIBLE);
             invalidateOptionsMenu();
             setFragment(new HomeFragment(),Home_FRAGMENT);
         }
        else if( id == R.id.nav_my_order){
-
+  gotoFragment("Mes Commandes",new MyOrdersFragment(),ORDERS_FRAGMENT);
             //to do my order
         }else if (id == R.id.nav_my_reward){
             //to do my reward
         }else if(id == R.id.nav_my_cart){
-            myCart();
+            gotoFragment("Mon Panier",new MyCartFragment(),CART_FRAGMENT);
 
         }else if(id == R.id.nav_my_wishlist){
             //tpo do my wishlist
