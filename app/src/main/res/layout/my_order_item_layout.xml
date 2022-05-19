@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Livré le Lundi, 13 juin 2022"
+        android:text="Livré le Lundi, 13 JUIN 2022"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/order_indcator"

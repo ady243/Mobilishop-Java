@@ -66,7 +66,7 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.Viewhold
           productImage.setImageResource(resource);
           productTitle.setText(title);
 
-          if(deliveredDate.equals("Annuler")){
+          if(deliveredDate.equals("Annulé")){
               orderIndicator.setImageTintList(ColorStateList.valueOf(itemView.getContext().getResources().getColor(R.color.red)));
               deliveryStatus.setText(deliveredDate);
           }else{

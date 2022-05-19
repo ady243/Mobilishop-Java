@@ -39,7 +39,7 @@ private RecyclerView myOrdersRecyclerView;
         List<MyOrderItemModel> myOrderItemModelList = new ArrayList<>();
         myOrderItemModelList.add(new MyOrderItemModel(R.drawable.fauteuil,2,"Chaise en Bois","Livré Lundi, le 13 JUIN 2022"));
         myOrderItemModelList.add(new MyOrderItemModel(R.mipmap.lamp1,2,"Lampadaire","Livré Lundi, le 13 JUIN 2022"));
-        myOrderItemModelList.add(new MyOrderItemModel(R.drawable.fauteuil,2,"Chaise en Bois","Annuler"));
+        myOrderItemModelList.add(new MyOrderItemModel(R.drawable.fauteuil,2,"Chaise en Bois","Annulé"));
         myOrderItemModelList.add(new MyOrderItemModel(R.mipmap.lamp1,2,"Lampadaire","Livré Lundi, le 13 JUIN 2022"));
 
 
