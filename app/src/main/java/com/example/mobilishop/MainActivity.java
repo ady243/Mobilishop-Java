@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
         frameLayout = findViewById(R.id.main_framelayout);
-        setFragment(new HomeFragment(),Home_FRAGMENT);
+        setFragment(new OrderDetailsFragment(),Home_FRAGMENT);
     }
 
 
