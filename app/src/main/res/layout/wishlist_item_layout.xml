@@ -45,6 +45,7 @@
         android:id="@+id/free_coupen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="Coupon  gratuit"
         android:textColor="#8000FF"
         android:textSize="12sp"
