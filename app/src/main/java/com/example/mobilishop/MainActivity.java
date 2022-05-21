@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity
        setSupportActionBar(toolbar);
 
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
      //  fab.setOnClickListener(view -> Snackbar.make(view,"Replace with your own action",Snackbar.LENGTH_LONG).setAction("Action",null).show());
 
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
         frameLayout = findViewById(R.id.main_framelayout);
-        setFragment(new OrderDetailsFragment(),Home_FRAGMENT);
+        setFragment(new HomeFragment(),Home_FRAGMENT);
     }
 
 

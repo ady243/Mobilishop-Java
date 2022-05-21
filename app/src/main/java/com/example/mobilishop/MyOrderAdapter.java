@@ -1,5 +1,6 @@
 package com.example.mobilishop;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -59,7 +60,10 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.Viewhold
           deliveryStatus = itemView.findViewById(R.id.order_delivered_date);
           rateNowContainer = itemView.findViewById(R.id.rate_now_container);
 
-
+     itemView.setOnClickListener(v -> {
+         Intent orderDetailsIntent = new Intent(itemView.getContext(),OrderDetailsActivity.class);
+         itemView.getContext().startActivity(orderDetailsIntent);
+     });
 
       }
       private void setData(int resource,String title,String deliveredDate,int rating){
