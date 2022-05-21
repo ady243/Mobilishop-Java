@@ -37,11 +37,12 @@
         android:layout_marginEnd="8dp"
         app:rippleColor="#E4F40014"
         android:clickable="true"
-        android:outlineSpotShadowColor="#FB0707"
+        android:outlineSpotShadowColor="#D60404"
         android:tint="#E4F40014"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_favorite_24"
+        app:backgroundTint="@color/white"
     />
 
     <TextView
