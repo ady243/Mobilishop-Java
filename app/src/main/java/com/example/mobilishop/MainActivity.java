@@ -1,9 +1,13 @@
 package com.example.mobilishop;
 import androidx.appcompat.widget.Toolbar;
+
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
@@ -25,11 +29,14 @@ public class MainActivity extends AppCompatActivity
     private static  final int CART_FRAGMENT =1;
     private static final int ORDERS_FRAGMENT = 2;
     private static final int WISHLIST_FRAGMENT=3;
+    private static  final int REWARDS_FRAGMENT = 4;
 
     private FrameLayout frameLayout;
     private ImageView actionBarLogo;
       private static int currentFragment = -1;
       private NavigationView navigationView;
+      private Window window;
+      private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +45,9 @@ public class MainActivity extends AppCompatActivity
        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar) ;
        actionBarLogo = findViewById(R.id.actionbar_logo);
        setSupportActionBar(toolbar);
+
+       window = getWindow();
+       window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
 
 
 
@@ -129,16 +139,17 @@ public class MainActivity extends AppCompatActivity
        else if( id == R.id.nav_my_order){
   gotoFragment("Mes Commandes",new MyOrdersFragment(),ORDERS_FRAGMENT);
             //to do my order
-        }else if (id == R.id.nav_my_reward){
-            //to do my reward
         }else if(id == R.id.nav_my_cart){
             gotoFragment("Mon Panier",new MyCartFragment(),CART_FRAGMENT);
+        }else if (id == R.id.nav_my_reward){
+           gotoFragment("Mes Récompenses", new MyRewardsFragment(),REWARDS_FRAGMENT);
+            //to do my reward
 
+        }else if(id == R.id.nav_my_account){
+            //to do account
         }else if(id == R.id.nav_my_wishlist){
            gotoFragment("Ma Liste de souhaits",new MyWishlistFragment(),WISHLIST_FRAGMENT);
             //tpo do my wishlist
-        }else if(id == R.id.nav_my_account){
-            //to do account
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -147,6 +158,13 @@ public class MainActivity extends AppCompatActivity
 
     private void  setFragment(Fragment fragment,int fragmentNo){
         if(fragmentNo != currentFragment) {
+           if(fragmentNo == REWARDS_FRAGMENT){
+              // window.setStatusBarColor(Color.parseColor("#5B04B1"));
+//               toolbar.setBackgroundColor(Color.parseColor("#5B04B1"));
+           }else{
+               window.setStatusBarColor(getResources().getColor(R.color.principal));
+              // toolbar.setBackgroundColor(getResources().getColor(R.color.white));
+           }
             currentFragment = fragmentNo;
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out);
