@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity
             gotoFragment("Mon Panier",new MyCartFragment(),CART_FRAGMENT);
 
         }else if(id == R.id.nav_my_wishlist){
-           gotoFragment("Fav",new MyWishlistFragment(),WISHLIST_FRAGMENT);
+           gotoFragment("Ma Liste de souhaits",new MyWishlistFragment(),WISHLIST_FRAGMENT);
             //tpo do my wishlist
         }else if(id == R.id.nav_my_account){
             //to do account

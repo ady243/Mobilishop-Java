@@ -41,11 +41,11 @@ public class MyWishlistFragment extends Fragment {
 
         List<WishlistModel> wishlistModelList = new ArrayList<>();
 
-        wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",1,"3",145,"590 €","500 €","paiement à la livraison"));
-        wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",0,"3",145,"590 €","500 €","paiement à la livraison"));
-        wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",2,"3",145,"590 €","500 €","paiement à la livraison"));
-        wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",4,"3",145,"590 €","500 €","paiement à la livraison"));
-        wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",1,"3",145,"590 €","500 €","paiement à la livraison"));
+        wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",1,"3",27,"590 €","paiement à la livraison",""));
+        wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",0,"3",27,"590 €","500 €",""));
+        wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",2,"3",27,"590 €","500 €",""));
+        wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",4,"3",27,"590 €","500 €",""));
+        wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",1,"3",27,"590 €","500 €",""));
 
       WishlistAdapter wishlistAdapter =new WishlistAdapter(wishlistModelList);
       wishlistRecylerView.setAdapter(wishlistAdapter);
