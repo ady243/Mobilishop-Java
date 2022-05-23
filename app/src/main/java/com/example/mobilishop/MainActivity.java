@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity
     private static final int ORDERS_FRAGMENT = 2;
     private static final int WISHLIST_FRAGMENT=3;
     private static  final int REWARDS_FRAGMENT = 4;
+    private static  final int ACCOUNT_FRAGMENT=5;
 
     private FrameLayout frameLayout;
     private ImageView actionBarLogo;
@@ -145,11 +146,14 @@ public class MainActivity extends AppCompatActivity
            gotoFragment("Mes Récompenses", new MyRewardsFragment(),REWARDS_FRAGMENT);
             //to do my reward
 
-        }else if(id == R.id.nav_my_account){
             //to do account
         }else if(id == R.id.nav_my_wishlist){
            gotoFragment("Ma Liste de souhaits",new MyWishlistFragment(),WISHLIST_FRAGMENT);
-            //tpo do my wishlist
+        }else if(id == R.id.nav_my_account){
+        gotoFragment("Mon Compte",new MyAccountFragment(),ACCOUNT_FRAGMENT);
+
+        }else if(id == R.id.nav_sign_out){
+
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
