@@ -43,10 +43,12 @@
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/grid_product_layout.xml" value="0.264" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/horizontal_scroll_item_layout.xml" value="0.536" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/horizontal_scroll_layout.xml" value="0.264" />
+        <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/my_adresses_layout.xml" value="0.536" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/my_order_item_layout.xml" value="0.264" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/nav_header_main.xml" value="0.264" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/order_details_layout.xml" value="0.4" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/order_status.xml" value="0.25" />
+        <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/order_status_layout.xml" value="0.21851851851851853" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/product_description_layout.xml" value="0.25" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/product_details_only_layout.xml" value="0.25" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/product_image_layout.xml" value="0.25" />
@@ -63,6 +65,7 @@
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/sliding_ad_layout.xml" value="0.16" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/strip_ad_layout.xml" value="0.25" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/wishlist_item_layout.xml" value="0.264" />
+        <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/your_recent_orders_layout.xml" value="0.264" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/menu/activity_main_drawer.xml" value="0.4" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/menu/main.xml" value="0.2" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/menu/search_and_cart_icon.xml" value="0.25" />
