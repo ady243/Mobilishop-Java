@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:stateListAnimator="@null"
         android:text="Mon Adresse"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -25,8 +26,9 @@
         android:id="@+id/view_all_adresses_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tout Voir"
+        android:layout_marginTop="4dp"
         android:background="@color/white"
+        android:text="Tout Voir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
