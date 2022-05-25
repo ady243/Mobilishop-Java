@@ -55,7 +55,7 @@ public class MyCartFragment extends Fragment {
         cartAdapter.notifyDataSetChanged();
 
         contunueBtn.setOnClickListener(v -> {
-            Intent deliveryIntent = new Intent(getContext(),DeliveryActivity.class);
+            Intent deliveryIntent = new Intent(getContext(),AddAdressActivity.class);
             getContext().startActivity(deliveryIntent);
         });
 
