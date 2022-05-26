@@ -15,8 +15,11 @@ public class AddressesAdapter extends RecyclerView.Adapter<AddressesAdapter.View
 
     private List<AddressesModel> addressesModelList;
 
-    public AddressesAdapter(List<AddressesModel> addressesModelList) {
+    private int MODE;
+
+    public AddressesAdapter(List<AddressesModel> addressesModelList,int MODE) {
         this.addressesModelList = addressesModelList;
+        this.MODE = MODE;
     }
 
     @NonNull
@@ -61,6 +64,8 @@ public class AddressesAdapter extends RecyclerView.Adapter<AddressesAdapter.View
             fullname.setText(username);
             address.setText(userAddress);
             pincode.setText(userPincode);
+
+          //Pause ...
         }
     }
 }

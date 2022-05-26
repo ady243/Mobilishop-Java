@@ -19,6 +19,10 @@ public class DeliveryActivity extends AppCompatActivity {
 
     private RecyclerView deliveryRecyclerView;
     private Button changeORaddNewAdressBtn;
+
+    public static final int SELECT_ADDRESS = 0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
