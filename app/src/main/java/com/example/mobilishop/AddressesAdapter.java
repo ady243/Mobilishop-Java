@@ -12,21 +12,18 @@ import java.util.List;
 
 public class AddressesAdapter extends RecyclerView.Adapter<AddressesAdapter.Viewholder> {
 
-
     private List<AddressesModel> addressesModelList;
 
-    private int MODE;
-
-    public AddressesAdapter(List<AddressesModel> addressesModelList,int MODE) {
+    public AddressesAdapter(List<AddressesModel> addressesModelList) {
         this.addressesModelList = addressesModelList;
-        this.MODE = MODE;
     }
 
     @NonNull
     @Override
     public AddressesAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.addresses_item_layout,viewGroup,false);
-        return new Viewholder(view);
+      View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.addresses_item_layout,viewGroup,true);
+
+      return new Viewholder(view);
     }
 
     @Override
@@ -45,7 +42,7 @@ public class AddressesAdapter extends RecyclerView.Adapter<AddressesAdapter.View
         return addressesModelList.size();
     }
 
-    public static class Viewholder extends RecyclerView.ViewHolder{
+    public static class  Viewholder extends RecyclerView.ViewHolder{
 
         private TextView fullname;
         private TextView address;
@@ -57,15 +54,13 @@ public class AddressesAdapter extends RecyclerView.Adapter<AddressesAdapter.View
             fullname = itemView.findViewById(R.id.name);
             address = itemView.findViewById(R.id.address);
             pincode = itemView.findViewById(R.id.pincode);
-
         }
 
-        private void setData(String username, String userAddress,String userPincode){
+        private void setData(String username,String userAddresss,String userPincode){
             fullname.setText(username);
-            address.setText(userAddress);
+            address.setText(userAddresss);
             pincode.setText(userPincode);
 
-          //Pause ...
         }
     }
 }

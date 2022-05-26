@@ -53,7 +53,7 @@ public class DeliveryActivity extends AppCompatActivity {
         cartAdapter.notifyDataSetChanged();
 
         changeORaddNewAdressBtn.setVisibility(View.VISIBLE);
-changeORaddNewAdressBtn.setOnClickListener(v -> {
+      changeORaddNewAdressBtn.setOnClickListener(v -> {
     Intent myAddressesIntent = new Intent(DeliveryActivity.this,MyAddressesActivity.class);
     startActivity(myAddressesIntent);
 });

@@ -14,46 +14,44 @@ import java.util.List;
 
 public class MyAddressesActivity extends AppCompatActivity {
 
-    private RecyclerView myAddressesRecyclerView;
+    private RecyclerView myAddresseRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_addresses);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setTitle("Mon adresse");
+        getSupportActionBar().setTitle("Mes Adresses");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-        myAddressesRecyclerView = findViewById(R.id.addresses_recyclerview);
+        myAddresseRecyclerView = findViewById(R.id.addresses_recyclerview);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        myAddressesRecyclerView.setLayoutManager(layoutManager);
+        myAddresseRecyclerView.setLayoutManager(layoutManager);
 
         List<AddressesModel> addressesModelList = new ArrayList<>();
-        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au rois","75011"));
-        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au rois","75011"));
-        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au rois","75011"));
-        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au rois","75011"));
-        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au rois","75011"));
-        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au rois","75011"));
-        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au rois","75011"));
-        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au rois","75011"));
-
+        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au roi","75011"));
+        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au roi","75011"));
+        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au roi","75011"));
+        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au roi","75011"));
+        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au roi","75011"));
+        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au roi","75011"));
+        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au roi","75011"));
+        addressesModelList.add(new AddressesModel("Mobili Shop","12 rue la fontaine au roi","75011"));
 
         AddressesAdapter addressesAdapter = new AddressesAdapter(addressesModelList);
-        myAddressesRecyclerView.setAdapter(addressesAdapter);
+        myAddresseRecyclerView.setAdapter(addressesAdapter);
         addressesAdapter.notifyDataSetChanged();
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        if(item.getItemId() == android.R.id.home){
-            finish();
-            return  true;
+        if (item.getItemId() == android.R.id.home){
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

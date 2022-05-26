@@ -7,6 +7,7 @@ public class AddressesModel {
     private String address;
     private String pincode;
 
+
     public AddressesModel(String fullname, String address, String pincode) {
         this.fullname = fullname;
         this.address = address;
