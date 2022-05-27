@@ -47,7 +47,7 @@ public class MyWishlistFragment extends Fragment {
         wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",4,"3",27,"590 €","500 €",""));
         wishlistModelList.add(new WishlistModel(R.drawable.fauteuil,"Chaise en bois",1,"3",27,"590 €","500 €",""));
 
-      WishlistAdapter wishlistAdapter =new WishlistAdapter(wishlistModelList);
+      WishlistAdapter wishlistAdapter =new WishlistAdapter(wishlistModelList,true);
       wishlistRecylerView.setAdapter(wishlistAdapter);
       wishlistAdapter.notifyDataSetChanged();
         return  view;
