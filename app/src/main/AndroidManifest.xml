@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mobilishop"
-    android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MobiliShop" >
+        android:theme="@style/Theme.MobiliShop">
+        <activity
+            android:name=".ViewAllActivity"
+            android:exported="false" />
         <activity
             android:name=".MyAddressesActivity"
             android:exported="false" />
@@ -44,7 +47,7 @@
             android:name=".SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme" >
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
