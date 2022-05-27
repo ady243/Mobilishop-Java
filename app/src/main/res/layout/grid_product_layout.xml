@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="1dp"
-    android:layout_height="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:background="@drawable/slider_background"
     android:elevation="3dp">
@@ -62,31 +62,25 @@
             layout="@layout/horizontal_scroll_item_layout"
             app:layout_columnWeight="1" />
 
-        <View
-            android:id="@+id/divider15"
-            android:layout_width="5dp"
-            android:layout_height="50dp"
-            android:background="?android:attr/listDivider"
-            app:layout_column="3"
-            app:layout_row="0" />
-
-        <View
-            android:id="@+id/divider16"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="?android:attr/listDivider"
-            app:layout_column="3"
-            app:layout_row="0" />
-
     </androidx.gridlayout.widget.GridLayout>
 
     <View
         android:id="@+id/divider13"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
+        android:background="#d6d6d6"
         app:layout_constraintBottom_toBottomOf="@+id/grid_layout"
-        app:layout_constraintEnd_toEndOf="@+id/grid_layout"
+        app:layout_constraintEnd_toEndOf="@id/grid_layout"
+        app:layout_constraintStart_toStartOf="@+id/grid_layout"
+        app:layout_constraintTop_toTopOf="@+id/grid_layout" />
+
+    <View
+        android:id="@+id/divider14"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#d6d6d6"
+        app:layout_constraintBottom_toBottomOf="@+id/grid_layout"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/grid_layout"
         app:layout_constraintTop_toTopOf="@+id/grid_layout" />
 

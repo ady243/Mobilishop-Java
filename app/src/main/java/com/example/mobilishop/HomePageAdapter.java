@@ -8,6 +8,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -262,7 +263,7 @@ public class HomePageAdapter extends RecyclerView.Adapter {
 
         private TextView gridLayoutTitle;
         private Button gridLayoutViewAllBtn;
-        private GridView gridView;
+        private GridLayout gridProductLayout;
 
 
 
@@ -270,18 +271,33 @@ public class HomePageAdapter extends RecyclerView.Adapter {
             super(itemView);
              gridLayoutTitle = itemView.findViewById(R.id.grid_product_layout_title);
             gridLayoutViewAllBtn = itemView.findViewById(R.id.grid_product_layout_viewall_btn);
-            gridView = itemView.findViewById(R.id.grid_product_layout_gridview);
+           gridProductLayout = itemView.findViewById(R.id.grid_layout);
         }
         private void setGridProductLayout(List<HorizontalProductScrollModel> horizontalProductScrollModelList,String title){
             gridLayoutTitle.setText(title);
-            gridView.setAdapter(new GridProductLayoutAdapter(horizontalProductScrollModelList));
-            gridLayoutViewAllBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent viewAllIntent = new Intent(itemView.getContext(),ViewAllActivity.class);
-                    viewAllIntent.putExtra("layout_code",1);
-                    itemView.getContext().startActivity(viewAllIntent);
-                }
+
+            for(int x = 0;x < 4;x++){
+                ImageView productImage = gridProductLayout.getChildAt(x).findViewById(R.id.h_s_product_image);
+                TextView productTitle = gridProductLayout.getChildAt(x).findViewById(R.id.h_s_product_title);
+                TextView productDiscription = gridProductLayout.getChildAt(x).findViewById(R.id.h_s_product_description);
+                TextView productPrice = gridProductLayout.getChildAt(x).findViewById(R.id.h_s_product_price);
+
+                productImage.setImageResource(horizontalProductScrollModelList.get(x).getProduceImage());
+                productTitle.setText(horizontalProductScrollModelList.get(x).getProductTitle());
+                productDiscription.setText(horizontalProductScrollModelList.get(x).getProductDescription());
+                productPrice.setText(horizontalProductScrollModelList.get(x).getProductPrice());
+                gridProductLayout.getChildAt(x).setOnClickListener(v -> {
+                    Intent productDetailsIntent = new Intent(itemView.getContext(),ProductDetailsActivity.class);
+                    itemView.getContext().startActivity(productDetailsIntent);
+
+                });
+            }
+
+
+            gridLayoutViewAllBtn.setOnClickListener(v -> {
+                Intent viewAllIntent = new Intent(itemView.getContext(),ViewAllActivity.class);
+                viewAllIntent.putExtra("layout_code",1);
+                itemView.getContext().startActivity(viewAllIntent);
             });
         }
     }
