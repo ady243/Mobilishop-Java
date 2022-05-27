@@ -110,12 +110,8 @@ public class HomeFragment extends Fragment {
        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.mipmap.hero4,"Fauteil"," En bois 54823","300 €"));
        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.mipmap.catbain,"Fauteil"," En bois 54823","300 €"));
        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.mipmap.catdeco,"Fauteil"," En bois 54823","300 €"));
-       horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.mipmap.catrangement,"Fauteil"," En bois 54823","300 €"));
-       horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.mipmap.lamp1,"Fauteil"," En bois 54823","300 €"));
 
        //////Horizontal Product layout
-
-
 
 
 
@@ -130,7 +126,14 @@ public class HomeFragment extends Fragment {
        List<HomePageModel>homePageModelList = new ArrayList<>();
        homePageModelList.add(new HomePageModel(1,R.drawable.hero1,"#ffffff"));
        homePageModelList.add(new HomePageModel(0,sliderModelList));
-
+       homePageModelList.add(new HomePageModel(1,R.drawable.hero1,"#ffffff"));
+       homePageModelList.add(new HomePageModel(2,"Offre du Jour",horizontalProductScrollModelList));
+       homePageModelList.add(new HomePageModel(3,"Offre du Jour",horizontalProductScrollModelList));
+       homePageModelList.add(new HomePageModel(0,sliderModelList));
+       homePageModelList.add(new HomePageModel(3,"Offre du Jour",horizontalProductScrollModelList));
+       homePageModelList.add(new HomePageModel(2,"Offre du Jour",horizontalProductScrollModelList));
+       homePageModelList.add(new HomePageModel(1,R.drawable.hero1,"#ffffff"));
+       homePageModelList.add(new HomePageModel(0,sliderModelList));
        homePageModelList.add(new HomePageModel(1,R.drawable.hero1,"#ffffff"));
        homePageModelList.add(new HomePageModel(2,"Offre du Jour",horizontalProductScrollModelList));
        homePageModelList.add(new HomePageModel(3,"Offre du Jour",horizontalProductScrollModelList));

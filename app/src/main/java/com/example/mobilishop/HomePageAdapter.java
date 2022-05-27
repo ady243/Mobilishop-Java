@@ -281,6 +281,7 @@ public class HomePageAdapter extends RecyclerView.Adapter {
                 TextView productTitle = gridProductLayout.getChildAt(x).findViewById(R.id.h_s_product_title);
                 TextView productDiscription = gridProductLayout.getChildAt(x).findViewById(R.id.h_s_product_description);
                 TextView productPrice = gridProductLayout.getChildAt(x).findViewById(R.id.h_s_product_price);
+                gridProductLayout.getChildAt(x).setBackgroundColor(Color.parseColor("#fffff"));
 
                 productImage.setImageResource(horizontalProductScrollModelList.get(x).getProduceImage());
                 productTitle.setText(horizontalProductScrollModelList.get(x).getProductTitle());
