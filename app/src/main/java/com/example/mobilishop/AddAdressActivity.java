@@ -25,13 +25,10 @@ public class AddAdressActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         saveBtn = findViewById(R.id.save_btn);
-        saveBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent deliveryIntent = new Intent(AddAdressActivity.this,DeliveryActivity.class);
-                startActivity(deliveryIntent);
-                finish();
-            }
+        saveBtn.setOnClickListener(v -> {
+            Intent deliveryIntent = new Intent(AddAdressActivity.this,DeliveryActivity.class);
+            startActivity(deliveryIntent);
+            finish();
         });
     }
     @Override

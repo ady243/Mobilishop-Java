@@ -2,14 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     android:elevation="3dp"
-    android:foreground="?attr/selectableItemBackground"
-    android:layout_marginBottom="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:foreground="?attr/selectableItemBackground">
+
 
     <TextView
         android:id="@+id/name"
@@ -17,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Noms"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -31,8 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Adresse"
-        android:textSize="16sp"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,9 +45,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Code Postal"
+        android:text="Code Postl"
         android:textColor="@color/black"
-        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,38 +65,37 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/slider_background"
         android:backgroundTint="#d6d6d6"
+        android:elevation="3dp"
         android:orientation="vertical"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="gone">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView33"
+            android:id="@+id/textView34"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="3dp"
+            android:layout_marginTop="6dp"
             android:paddingStart="16dp"
-            android:paddingTop="6dp"
             android:paddingEnd="16dp"
-            android:paddingBottom="6dp"
-            android:text="Éditer"
+            android:paddingBottom="16dp"
+            android:text="Modifier"
             android:textAlignment="center"
-            android:textSize="12sp" />
+            android:textSize="10sp" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/textView35"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
             android:paddingStart="16dp"
-            android:paddingTop="6dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="6dp"
-            android:text="Supprimer"
-            android:textAlignment="center"
+            android:paddingBottom="16dp"
+            android:text="Effacerr"
             android:textSize="12sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

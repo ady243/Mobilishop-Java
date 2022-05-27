@@ -55,6 +55,7 @@ public class DeliveryActivity extends AppCompatActivity {
         changeORaddNewAdressBtn.setVisibility(View.VISIBLE);
       changeORaddNewAdressBtn.setOnClickListener(v -> {
     Intent myAddressesIntent = new Intent(DeliveryActivity.this,MyAddressesActivity.class);
+    myAddressesIntent.putExtra("MODE",SELECT_ADDRESS);
     startActivity(myAddressesIntent);
 });
     }

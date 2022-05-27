@@ -47,7 +47,7 @@
             android:drawablePadding="16dp"
             android:drawableTint="@color/principal"
             android:padding="16dp"
-            android:text="Ajouter une nouvel adresse"
+            android:text="Ajouter une nouvelle adresse"
             android:textColor="@color/principal"
             android:textSize="16sp" />
     </LinearLayout>
