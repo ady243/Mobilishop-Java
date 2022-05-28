@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity
         frameLayout = findViewById(R.id.main_framelayout);
 
         if (showCart){
-           drawer.setDrawerLockMode(1);
+           drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             gotoFragment("Mon Panier",new MyCartFragment(),-2);
         }else{
