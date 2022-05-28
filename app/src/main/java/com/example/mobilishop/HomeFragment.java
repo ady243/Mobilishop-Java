@@ -69,36 +69,16 @@ public class HomeFragment extends Fragment {
 
        ///////////// to do banner slider
 
-
-
        List<SliderModel> sliderModelList = new ArrayList<SliderModel>();
 
-       sliderModelList.add(new SliderModel(R.mipmap.catlit,"#ffffff"));
-       sliderModelList.add(new SliderModel(R.mipmap.hero3,"#ffffff"));
        sliderModelList.add(new SliderModel(R.mipmap.catbain,"#ffffff"));
-
-
-
-       //sliderModelList.add(new SliderModel(R.mipmap.emaiil,"#e9eef2")); // the place for the mail
-      // sliderModelList.add(new SliderModel(R.mipmap.emaiil,"#e9eef2"));
-    //   sliderModelList.add(new SliderModel(R.mipmap.ic_launcher,"#e9eef2"));
-      // sliderModelList.add(new SliderModel(R.mipmap.emaiil,"#e9eef2"));
-      // sliderModelList.add(new SliderModel(R.mipmap.emaiil,"#e9eef2")); // for the cart
-      // sliderModelList.add(new SliderModel(R.drawable.ic_baseline_account_circle_24,"#e9eef2"));
-      // sliderModelList.add(new SliderModel(R.mipmap.home,"#e9eef2"));
-
-
-
        sliderModelList.add(new SliderModel(R.mipmap.lamp1,"#ffffff"));
-      sliderModelList.add(new SliderModel(R.mipmap.plant1,"#ffffff")); // the place for the mail
+       sliderModelList.add(new SliderModel(R.mipmap.plant1,"#ffffff"));
        sliderModelList.add(new SliderModel(R.mipmap.plant3,"#ffffff"));
        sliderModelList.add(new SliderModel(R.mipmap.catbain,"#ffffff"));
        sliderModelList.add(new SliderModel(R.mipmap.plant2,"#ffffff"));
 
-
-
       ///////////// to do banner slider
-
 
 
        //////Horizontal Product layout

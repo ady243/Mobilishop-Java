@@ -40,6 +40,7 @@ private TabLayout viewpagerIndicator;
 
     private static boolean ALREADY_ADDED_TO_WISHLIST = false;
    private FloatingActionButton addToWishlistBtn;
+    private boolean showCart;
 
 
     @Override
@@ -161,7 +162,9 @@ private TabLayout viewpagerIndicator;
             //to do notification
             return true;
         }else if(id == R.id.main_cart_icon){
-            //to do cart
+            Intent cartItem = new Intent(ProductDetailsActivity.this,MainActivity.class);
+            showCart = true;
+            startActivity(cartItem);
             return true;
         }
         return super.onOptionsItemSelected(item);

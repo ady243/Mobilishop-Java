@@ -31,10 +31,11 @@ public class MainActivity extends AppCompatActivity
     private static final int WISHLIST_FRAGMENT=3;
     private static  final int REWARDS_FRAGMENT = 4;
     private static  final int ACCOUNT_FRAGMENT=5;
+    public static Boolean showCart = false;
 
     private FrameLayout frameLayout;
     private ImageView actionBarLogo;
-      private static int currentFragment = -1;
+      private  int currentFragment = -1;
       private NavigationView navigationView;
       private Window window;
       private Toolbar toolbar;
@@ -53,19 +54,30 @@ public class MainActivity extends AppCompatActivity
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-     //  fab.setOnClickListener(view -> Snackbar.make(view,"Replace with your own action",Snackbar.LENGTH_LONG).setAction("Action",null).show());
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+
 
          navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
+
         frameLayout = findViewById(R.id.main_framelayout);
-        setFragment(new HomeFragment(),Home_FRAGMENT);
+
+        if (showCart){
+           drawer.setDrawerLockMode(1);
+           getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            gotoFragment("Mon Panier",new MyCartFragment(),-2);
+        }else{
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            drawer.addDrawerListener(toggle);
+            toggle.syncState();
+            setFragment(new HomeFragment(),Home_FRAGMENT);
+        }
+
+
     }
 
 
@@ -81,10 +93,15 @@ public class MainActivity extends AppCompatActivity
 
 
             }else{
-                actionBarLogo.setVisibility(View.VISIBLE);
-                invalidateOptionsMenu();
-                setFragment(new HomeFragment(),Home_FRAGMENT);
-                navigationView.getMenu().getItem(0).setChecked(true);
+                if (showCart){
+                    showCart = false;
+                    finish();
+                }else {
+                    actionBarLogo.setVisibility(View.VISIBLE);
+                    invalidateOptionsMenu();
+                    setFragment(new HomeFragment(), Home_FRAGMENT);
+                    navigationView.getMenu().getItem(0).setChecked(true);
+                }
             }
         }
     }
@@ -114,6 +131,12 @@ public class MainActivity extends AppCompatActivity
         }else if(id == R.id.main_cart_icon){
            gotoFragment("Mon Panier",new MyCartFragment(),CART_FRAGMENT);
             return true;
+        }else if(id == android.R.id.home){
+            if (showCart){
+                showCart = false;
+                finish();
+                return  true;
+            }
         }
         return super.onOptionsItemSelected(item);
     }
@@ -163,11 +186,10 @@ public class MainActivity extends AppCompatActivity
     private void  setFragment(Fragment fragment,int fragmentNo){
         if(fragmentNo != currentFragment) {
            if(fragmentNo == REWARDS_FRAGMENT){
-              // window.setStatusBarColor(Color.parseColor("#5B04B1"));
-//               toolbar.setBackgroundColor(Color.parseColor("#5B04B1"));
+
            }else{
                window.setStatusBarColor(getResources().getColor(R.color.principal));
-              // toolbar.setBackgroundColor(getResources().getColor(R.color.white));
+
            }
             currentFragment = fragmentNo;
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
