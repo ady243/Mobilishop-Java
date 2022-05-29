@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity
 
             Intent registerIntent = new Intent(MainActivity.this,RegisterActivity.class);
 
-            dialogSignUpBtn.setOnClickListener(new View.OnClickListener() {
+            dialogSignInBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     signInDialog.dismiss();
