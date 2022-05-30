@@ -31,6 +31,7 @@
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/cart_total_amount_layout.xml" value="0.264" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/category_item.xml" value="0.6" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/content_main.xml" value="0.2" />
+        <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/coupen_redeem_dialog.xml" value="0.22314814814814815" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/fragment_cart_adapter.xml" value="0.25" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/fragment_home.xml" value="0.2" />
@@ -62,12 +63,13 @@
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/product_images_layout.xml" value="0.264" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/product_specification_item_layout.xml" value="0.264" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/profile_data_layout.xml" value="0.264" />
+        <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/quantity_dialogue.xml" value="0.4" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/ratings_layout.xml" value="0.4" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/reward_with_product_layout.xml" value="0.264" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/rewards_item_layout.xml" value="0.25" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/shipping_details.xml" value="0.25" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/shipping_details_layout.xml" value="0.25" />
-        <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/sign_in_dialog.xml" value="0.25" />
+        <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/sign_in_dialog.xml" value="0.264" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/slider_layout.xml" value="0.264" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/sliding_ad_banner.xml" value="0.25" />
         <entry key="..\:/Users/masiv/AndroidStudioProjects/Mobilishop/app/src/main/res/layout/sliding_ad_layout.xml" value="0.16" />

@@ -144,14 +144,11 @@ public class MainActivity extends AppCompatActivity
 
             Intent registerIntent = new Intent(MainActivity.this,RegisterActivity.class);
 
-            dialogSignInBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    signInDialog.dismiss();
-                    setSignUpFragment  = false;
-                    startActivity(registerIntent);
+            dialogSignInBtn.setOnClickListener(v -> {
+                signInDialog.dismiss();
+                setSignUpFragment  = false;
+                startActivity(registerIntent);
 
-                }
             });
             signInDialog.show();
 
@@ -163,7 +160,7 @@ public class MainActivity extends AppCompatActivity
                     startActivity(registerIntent);
                 }
             });
-          // gotoFragment("Mon Panier",new MyCartFragment(),CART_FRAGMENT);
+            gotoFragment("Mon Panier",new MyCartFragment(),CART_FRAGMENT);
             return true;
         }else if(id == android.R.id.home){
             if (showCart){
