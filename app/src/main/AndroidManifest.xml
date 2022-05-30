@@ -13,38 +13,38 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobiliShop">
         <activity
-            android:name=".ViewAllActivity"
+            android:name=".Activity.ViewAllActivity"
             android:exported="false" />
         <activity
-            android:name=".MyAddressesActivity"
+            android:name=".Activity.MyAddressesActivity"
             android:exported="false" />
         <activity
-            android:name=".AddAdressActivity"
+            android:name=".Activity.AddAdressActivity"
             android:exported="false" />
         <activity
-            android:name=".DeliveryActivity"
+            android:name=".Activity.DeliveryActivity"
             android:exported="false" />
         <activity
-            android:name=".OrderDetailsActivity"
+            android:name=".Activity.OrderDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".ProductDetailsActivity"
+            android:name=".Activity.ProductDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".CategoryActivity"
+            android:name=".Activity.CategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:exported="false"
             android:label="MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MobiliShop.NoActionBar" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Activity.RegisterActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activity.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
