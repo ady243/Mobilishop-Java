@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mobilishop.Activity.MainActivity;
+import com.example.mobilishop.GeneratorApi;
 import com.example.mobilishop.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -50,6 +51,11 @@ public class SignInFragment extends Fragment {
     private Button signInBtn;
     private FirebaseAuth firebaseAuth;
     private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
+
+
+    public void signIn(){
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -193,6 +199,11 @@ public class SignInFragment extends Fragment {
              //to do else of email and pattern
             Toast.makeText(getActivity(),"Incorrect email or password",Toast.LENGTH_SHORT).show();
         }
+    }
+    public interface ApiService{
+        void onResponse(GeneratorApi generatorApi);
+        void onFailure(Throwable throwable);
+
     }
     private void mainIntent(){
         Intent mainIntent = new Intent(getActivity(), MainActivity.class);
