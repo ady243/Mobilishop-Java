@@ -1,5 +1,5 @@
-package com.example.mobilishop;
-import com.google.protobuf.Api;
+package com.example.mobilishop.API;
+import com.example.mobilishop.API.ApiService;
 
 import retrofit2.Retrofit;
 

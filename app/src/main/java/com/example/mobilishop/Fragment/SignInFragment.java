@@ -25,7 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mobilishop.Activity.MainActivity;
-import com.example.mobilishop.GeneratorApi;
+import com.example.mobilishop.API.GeneratorApi;
 import com.example.mobilishop.R;
 import com.google.firebase.auth.FirebaseAuth;
 
