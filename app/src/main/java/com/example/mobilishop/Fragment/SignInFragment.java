@@ -25,7 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mobilishop.Activity.MainActivity;
-import com.example.mobilishop.API.GeneratorApi;
+import com.example.mobilishop.API.ServiceGeneratorApi;
 import com.example.mobilishop.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -201,7 +201,7 @@ public class SignInFragment extends Fragment {
         }
     }
     public interface ApiService{
-        void onResponse(GeneratorApi generatorApi);
+        void onResponse(ServiceGeneratorApi generatorApi);
         void onFailure(Throwable throwable);
 
     }

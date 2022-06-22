@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.mobilishop.API.ApiService;
+import com.example.mobilishop.API.ServiceGeneratorApi;
 import com.example.mobilishop.Activity.AddAdressActivity;
 import com.example.mobilishop.Adapter.CartAdapter;
 import com.example.mobilishop.Model.CartItemModel;
@@ -19,6 +21,7 @@ import com.example.mobilishop.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executor;
 
 /**
  * A simple {@link Fragment} subclass
@@ -36,6 +39,7 @@ public class MyCartFragment extends Fragment {
 
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,6 +47,8 @@ public class MyCartFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_cart, container, false);
 
         cartItemsRecyclerView = view.findViewById(R.id.cart_items_recyclerview);
+
+
 
         contunueBtn = view.findViewById(R.id.cart_continue_btn);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
