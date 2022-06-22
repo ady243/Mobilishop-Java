@@ -18,7 +18,7 @@ public interface ApiService {
     Call<CartItemModel> CART_ITEM_MODEL_CALL(@Body CartItemModel cartItemModel);
 
     //Categories
-    @POST("")
+    @POST("{{mobilishop.com}}/cart")
     Call<CategoryModel> CATEGORY_MODEL_CALL(@Body CategoryModel categoryModel);
 
    //Product
